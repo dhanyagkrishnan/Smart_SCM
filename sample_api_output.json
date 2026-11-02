@@ -1,0 +1,24 @@
+{
+  "kpis": {
+    "inventory_value": 322700.0,
+    "products": 5,
+    "critical_items": 2,
+    "pending_orders": 2
+  },
+  "inventory": [
+    {"sku":"FAB-001","product_name":"Cotton Fabric","stock":420,"reorder_level":300,"days_of_stock":6.0,"status":"Healthy"},
+    {"sku":"FAB-002","product_name":"Polyester Fabric","stock":180,"reorder_level":250,"days_of_stock":3.3,"status":"Critical"},
+    {"sku":"YRN-001","product_name":"Cotton Yarn","stock":900,"reorder_level":500,"days_of_stock":11.2,"status":"Healthy"},
+    {"sku":"YRN-002","product_name":"Blended Yarn","stock":160,"reorder_level":220,"days_of_stock":3.6,"status":"Critical"},
+    {"sku":"ACC-001","product_name":"Zipper","stock":1200,"reorder_level":700,"days_of_stock":13.3,"status":"Healthy"}
+  ],
+  "risks": [
+    {"sku":"FAB-002","risk":"Medium","best_supplier":"Coimbatore Fibres","message":"Polyester Fabric may face stock-out risk."},
+    {"sku":"YRN-002","risk":"Medium","best_supplier":"Salem Spinners","message":"Blended Yarn may face stock-out risk."}
+  ],
+  "actions": [
+    {"priority":"HIGH","sku":"FAB-002","action":"Purchase 330 units","supplier":"Coimbatore Fibres","why":"Stock 180 is below reorder level 250","confidence":91},
+    {"priority":"HIGH","sku":"YRN-002","action":"Purchase 265 units","supplier":"Salem Spinners","why":"Stock 160 is below reorder level 220","confidence":86}
+  ],
+  "supplier_count": 6
+}
